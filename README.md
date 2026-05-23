@@ -47,11 +47,13 @@ pip install -r requirements.txt
 
 ### 4. Set up environment variables
 Create a `.env` file:
+```
 DB_NAME=datachat
 DB_USER=datachat_user
 DB_PASSWORD=yourpassword
 DB_HOST=localhost
 DB_PORT=5432
+```
 
 ### 5. Set up PostgreSQL
 ```sql
