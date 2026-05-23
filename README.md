@@ -47,3 +47,25 @@ pip install -r requirements.txt
 
 ### 4. Set up environment variables
 Create a `.env` file:
+DB_NAME=datachat
+DB_USER=datachat_user
+DB_PASSWORD=yourpassword
+DB_HOST=localhost
+DB_PORT=5432
+
+### 5. Set up PostgreSQL
+```sql
+CREATE DATABASE datachat;
+CREATE USER datachat_user WITH PASSWORD 'yourpassword';
+GRANT ALL PRIVILEGES ON DATABASE datachat TO datachat_user;
+```
+
+### 6. Run migrations
+```bash
+python manage.py migrate
+```
+
+### 7. Start Ollama and run server
+```bash
+ollama serve  # in a separate terminal
+python manage.py runserver
